@@ -45,6 +45,7 @@ const AuthProvider = ({ children }) => {
       await AuthService.logout();
       setUser(null);
       localStorage.removeItem("user");
+      navigate("/signin");
     } catch (error) {
       console.error("Logout error:", error);
     } finally {
