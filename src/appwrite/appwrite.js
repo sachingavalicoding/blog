@@ -1,10 +1,10 @@
 import { Client, Storage, Account } from "appwrite";
+import config from "../config/config";
 
 const client = new Client();
 
-client
-  .setEndpoint("https://cloud.appwrite.io/v1") // Your API Endpoint
-  .setProject("65f6c0197119093af2cf"); // Your project ID
-
 export const storage = new Storage(client);
 export const account = new Account(client);
+client
+  .setEndpoint(config.appWriteUrl) // Your API Endpoint
+  .setProject(config.projectId); // Your project ID
