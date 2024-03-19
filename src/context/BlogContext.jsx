@@ -1,6 +1,6 @@
 // BlogContext.js
 import { createContext, useContext, useState, useEffect } from "react";
-import { databases } from "../server/appwrite";
+import { databases } from "../appwrite/appwrite";
 import config from "../config/config";
 
 const BlogContext = createContext();
